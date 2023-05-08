@@ -1,0 +1,30 @@
+<%- include("layout/header") %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+            <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="name">Title</label>
+                    <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Book Title" required />
+                </div>
+                <div class="mb-3">
+                    <label for="author">Auther Name:</label>
+                    <input type="text" name="author" class="form-control form-control-lg" placeholder="Enter Author name" required />
+                </div>
+                <div class="mb-3">
+                    <label for="isbn">ISBN</label>
+                    <input type="number" name="isbn" class="form-control form-control-lg" placeholder="Enter Book ISBN" required />
+                </div>
+                <div class="mb-3">
+                    <label for="image">Cover Image</label>
+                    <input type="file" name="image" class="form-control form-control-lg" required />
+                </div>
+                <div class="mb-3 d-grid">
+                    <input type="button" name="submit" value="Add Book" class="btn btn-primary btn-lg" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("layout/footer") %>
